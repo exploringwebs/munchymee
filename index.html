@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Munchymee - Premium Cookies for Your Business</title>
+    <title>Munchymee - Premium Baked Goods for Your Business</title>
     <style>
         * {
             margin: 0;
@@ -80,7 +80,7 @@
         }
 
         .cta-btn:hover {
-            background: #f6f6f6;
+            background: #ffffff;
             transform: translateY(-2px);
             box-shadow: 0 6px 25px rgba(59, 32, 21, 0.3);
         }
@@ -98,6 +98,10 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+        }
+
+        .hero-content {
+            order: 1;
         }
 
         .hero-content h1 {
@@ -125,64 +129,25 @@
             justify-content: center;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(59, 32, 21, 0.1);
+            order: 2;
         }
 
-        /* Insert main hero cookie image here */
+        /* Insert main hero image here */
         .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-
-        /* Add this to your existing .hero styles */
-.hero {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 5rem 2rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-/* Add these new styles */
-.hero-content {
-    order: 1;
-}
-
-.hero-image {
-    order: 2;
-}
-
-/* Update your existing mobile media query */
-@media (max-width: 968px) {
-    .hero {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 3rem 1.5rem;
-    }
-    .hero-content {
-        order: 2;
-        text-align: center; /* Center align text on mobile */
-    }
-
-    .hero-image {
-        order: 1; /* Image comes first on mobile */
-    }
-    
-    /* Rest of your existing mobile styles... */
-}
-        /* About Section */
-        .about {
+        /* Products Section */
+        .products {
             background: var(--cream);
             padding: 5rem 2rem;
         }
 
-        .about-container {
-            max-width: 900px;
+        .products-container {
+            max-width: 1400px;
             margin: 0 auto;
-            text-align: center;
         }
 
         .section-title {
@@ -190,6 +155,79 @@
             color: var(--brand-brown);
             margin-bottom: 1.5rem;
             font-weight: 700;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #5a4a3a;
+            margin-bottom: 3.5rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: var(--soft-white);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(59, 32, 21, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 45px rgba(59, 32, 21, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background: var(--beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Insert product images here */
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .product-content h3 {
+            font-size: 1.8rem;
+            color: var(--brand-brown);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .product-content p {
+            font-size: 1rem;
+            color: #5a4a3a;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .about-container p {
@@ -200,9 +238,13 @@
 
         /* Benefits Section */
         .benefits {
+            background: var(--beige);
+            padding: 5rem 2rem;
+        }
+
+        .benefits-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 5rem 2rem;
         }
 
         .benefits-title {
@@ -222,7 +264,7 @@
             border-radius: 20px;
             text-align: center;
             transition: all 0.3s ease;
-            border: 2px solid var(--beige);
+            border: 2px solid transparent;
         }
 
         .benefit-card:hover {
@@ -251,7 +293,6 @@
 
         /* Who It's For Section */
         .who-its-for {
-            background: var(--beige);
             padding: 5rem 2rem;
         }
 
@@ -272,7 +313,7 @@
         }
 
         .who-card {
-            background: var(--soft-white);
+            background: var(--cream);
             padding: 2.5rem 2rem;
             border-radius: 20px;
             text-align: center;
@@ -294,45 +335,6 @@
         .who-card p {
             color: #5a4a3a;
             font-size: 0.95rem;
-        }
-
-        /* Visual Gallery Section */
-        .gallery {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-
-        .gallery-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .gallery-item {
-            width: 100%;
-            height: 350px;
-            background: var(--cream);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(59, 32, 21, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.03);
-        }
-
-        /* Insert cookie images here */
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
 
         /* Final CTA Section */
@@ -419,10 +421,16 @@
                 gap: 3rem;
                 padding: 3rem 1.5rem;
             }
-.hero-content {
-        order: 2;
-        text-align: center; /* Center align text on mobile */
-    }
+
+            .hero-content {
+                order: 2;
+                text-align: center;
+            }
+
+            .hero-image {
+                order: 1;
+                height: 400px;
+            }
 
             .hero-content h1 {
                 font-size: 2.5rem;
@@ -430,10 +438,6 @@
 
             .hero-content p {
                 font-size: 1.1rem;
-            }
-
-            .hero-image {
-                height: 400px;
             }
 
             .section-title {
@@ -453,12 +457,13 @@
                 font-size: 0.95rem;
             }
 
-            .benefits-grid,
-            .who-grid {
+            .products-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
-            .gallery-grid {
+            .benefits-grid,
+            .who-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -493,7 +498,7 @@
         <div class="header-container">
             <div class="logo-container">
                 <!-- Insert logo image here -->
-                 <img src="img/Munchymee Logo 1.jpeg" alt="Munchymee Logo">
+               <img src="img/Munchymee Logo 1.jpeg" alt="Munchymee Logo">
             </div>
             <a href="tel:+1234567890" class="cta-btn">Call Now</a>
         </div>
@@ -503,12 +508,58 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Deliciously Simple. Perfectly Consistent.</h1>
-            <p>Premium cookies crafted for businesses that care about quality. From your office pantry to corporate events, Munchymee delivers freshness at scale.</p>
+            <p>Premium baked goods crafted for businesses that care about quality. From your office pantry to corporate events, Munchymee delivers freshness at scale.</p>
             <a href="tel:+1234567890" class="cta-btn">Call Now to Order</a>
         </div>
         <div class="hero-image">
-            <!-- Insert main hero cookie image here -->
-            <img src="img/Munchymee 1.jpeg" alt="Munchymee Cookies">
+            <!-- Insert main hero image here -->
+            <img src="img/Munchymee 1.jpeg" alt="Munchymee Baked Goods">
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="products-container">
+            <h2 class="section-title">Our Premium Selection</h2>
+            <p class="section-subtitle">Handcrafted with love, delivered with care</p>
+            
+            <div class="products-grid">
+                <!-- Cookies -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- Insert cookie image here -->
+                        <img src="img/Munchymee 2.jpeg" alt="Munchymee Cookies">
+                    </div>
+                    <div class="product-content">
+                        <h3>Cookies</h3>
+                        <p>Perfectly baked, irresistibly soft cookies that bring comfort and joy to every bite. Ideal for offices, cafés, and corporate gifting.</p>
+                    </div>
+                </div>
+
+                <!-- Donuts -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- Insert donut image here -->
+                        <!-- Example: <img src="path-to-donut-image.jpg" alt="Munchymee Donuts"> -->
+                    </div>
+                    <div class="product-content">
+                        <h3>Donuts</h3>
+                        <p>Fluffy, freshly glazed donuts that elevate any morning meeting or afternoon break. Made fresh daily for your business.</p>
+                    </div>
+                </div>
+
+                <!-- Tarts -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- Insert tart image here -->
+                        <!-- Example: <img src="path-to-tart-image.jpg" alt="Munchymee Tarts"> -->
+                    </div>
+                    <div class="product-content">
+                        <h3>Tarts</h3>
+                        <p>Elegant, buttery tarts with rich fillings. Perfect for impressing clients and adding sophistication to any event.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -516,40 +567,42 @@
     <section class="about">
         <div class="about-container">
             <h2 class="section-title">What Makes Munchymee Special</h2>
-            <p>We bake premium cookies designed for businesses that demand consistency, quality, and reliability. Whether you're stocking your office kitchen, serving customers at your café, or looking for the perfect corporate gift, Munchymee delivers freshly baked excellence every single time. Our streamlined process ensures bulk orders arrive on time, every time, without compromising on taste or freshness.</p>
+            <p>We bake premium treats designed for businesses that demand consistency, quality, and reliability. Whether you're stocking your office kitchen, serving customers at your café, or looking for the perfect corporate gift, Munchymee delivers freshly baked excellence every single time. Our streamlined process ensures bulk orders arrive on time, every time, without compromising on taste or freshness.</p>
         </div>
     </section>
 
     <!-- Benefits Section -->
     <section class="benefits">
-        <div class="benefits-title">
-            <h2 class="section-title">Why Businesses Choose Munchymee</h2>
-        </div>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon">🍪</div>
-                <h3>Unmatched Consistency</h3>
-                <p>Every batch meets the same high standards. Your team gets the same great taste with every order, guaranteed.</p>
+        <div class="benefits-container">
+            <div class="benefits-title">
+                <h2 class="section-title">Why Businesses Choose Munchymee</h2>
             </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">✨</div>
-                <h3>Always Fresh</h3>
-                <p>Baked fresh and delivered promptly. We never compromise on quality, no matter the order size.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">📦</div>
-                <h3>Bulk-Friendly</h3>
-                <p>Scalable orders designed for businesses. From small offices to large corporate events, we've got you covered.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">⚡</div>
-                <h3>Simple Ordering</h3>
-                <p>One call, done. No complicated forms or long wait times. Just quick, efficient service tailored to your needs.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">🎯</div>
-                <h3>Reliable Supply</h3>
-                <p>Count on us for regular orders. We build partnerships with businesses looking for a dependable cookie supplier.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🍪</div>
+                    <h3>Unmatched Consistency</h3>
+                    <p>Every batch meets the same high standards. Your team gets the same great taste with every order, guaranteed.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Always Fresh</h3>
+                    <p>Baked fresh and delivered promptly. We never compromise on quality, no matter the order size.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📦</div>
+                    <h3>Bulk-Friendly</h3>
+                    <p>Scalable orders designed for businesses. From small offices to large corporate events, we've got you covered.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Simple Ordering</h3>
+                    <p>One call, done. No complicated forms or long wait times. Just quick, efficient service tailored to your needs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Reliable Supply</h3>
+                    <p>Count on us for regular orders. We build partnerships with businesses looking for a dependable supplier.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -564,44 +617,23 @@
                 <div class="who-card">
                     <div class="who-card-icon">🏢</div>
                     <h3>Offices</h3>
-                    <p>Keep your team happy with premium cookies in the break room. Boost morale with quality treats.</p>
+                    <p>Keep your team happy with premium baked goods in the break room. Boost morale with quality treats.</p>
                 </div>
                 <div class="who-card">
                     <div class="who-card-icon">☕</div>
                     <h3>Cafés & Restaurants</h3>
-                    <p>Serve consistently delicious cookies to your customers. A reliable partner for your menu.</p>
+                    <p>Serve consistently delicious treats to your customers. A reliable partner for your menu.</p>
                 </div>
                 <div class="who-card">
                     <div class="who-card-icon">🎁</div>
                     <h3>Corporate Gifting</h3>
-                    <p>Impress clients and partners with premium cookie gifts. Thoughtful, professional, memorable.</p>
+                    <p>Impress clients and partners with premium gift boxes. Thoughtful, professional, memorable.</p>
                 </div>
                 <div class="who-card">
                     <div class="who-card-icon">🎉</div>
                     <h3>Events & Catering</h3>
                     <p>Large gatherings made easy. Bulk orders delivered fresh for conferences, parties, and celebrations.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <div class="gallery-title">
-            <h2 class="section-title">See What You'll Love</h2>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <!-- Insert cookie image here -->
-                 <img src="img/Munchymee 2.jpeg" alt="Munchymee Cookie">
-            </div>
-            <div class="gallery-item">
-                <!-- Insert cookie image here -->
-                <img src="img/Munchymee 3.jpeg" alt="Munchymee Cookie">
-            </div>
-            <div class="gallery-item">
-                <!-- Insert cookie image here -->
-                <img src="img/Munchymee Website.png" alt="Munchymee Cookie">
             </div>
         </div>
     </section>
@@ -617,7 +649,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">Munchymee</div>
-            <div class="footer-tagline">Premium cookies for businesses that care</div>
+            <div class="footer-tagline">Premium baked goods for businesses that care</div>
             <div class="footer-cta">
                 <a href="tel:+1234567890" class="cta-btn">Call Now</a>
             </div>
@@ -639,7 +671,7 @@
             }
         });
 
-        // Smooth scroll for anchor links (if needed in future)
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
